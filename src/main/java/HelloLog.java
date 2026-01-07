@@ -48,7 +48,7 @@ public class HelloLog {
     public static void bad1() {
      try {
         // ruleid: java-jwt-hardcoded-secret
-        Algorithm algorithm = Algorithm.HMAC256("secret");
+        Algorithm algorithm = Algorithm.HMAC256("secret"); // nosemgrep
         String token = JWT.create()
             .withIssuer("auth0")
             .sign(algorithm);
